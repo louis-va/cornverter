@@ -1,0 +1,32 @@
+button#submit {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  bottom: -2.25rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 1rem 2rem;
+  border: .2rem solid var(--black-100);
+  background-color: var(--white-100);
+  border-radius: 5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 .2rem 0 0 var(--black-100);
+}
+
+button#submit:hover {
+  cursor: pointer;
+  box-shadow: 0 .3rem 0 0 var(--black-100);
+  bottom: -2.15rem;
+}
+
+button#submit:active {
+  box-shadow: 0 .1rem 0 0 var(--black-100);
+  bottom: -2.35rem;
+}
+
+button#submit img{
+  width: 1.5rem;
+}

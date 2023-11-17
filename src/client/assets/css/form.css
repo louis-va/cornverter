@@ -1,0 +1,65 @@
+section#usd {
+  position: relative;
+  z-index: 2;
+}
+
+section#usd label {
+  position: relative;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+section#usd label .label-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  margin-left: 4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black-60);
+}
+
+section#usd label .label-content img {
+  width: 2rem;
+}
+
+section#usd input {
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem 2rem 4rem;
+  width: 100%;
+  border: .3rem dashed var(--black-20);
+  border-radius: 1.5rem;
+  font-size: 6rem;
+  height: 8rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+section#usd label:hover {
+  cursor: text;
+}
+
+section#usd input:hover {
+  border: .3rem dashed var(--black-40);
+}
+
+section#usd input:focus {
+  border: .3rem solid var(--black-40);
+}
+
+section#usd input::placeholder {
+  color: var(--black-40);
+}
+
+@media screen and (max-width: 600px) {
+  section#usd input {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
+  section#usd label .label-content {
+    margin-left: 2rem;
+  }
+}

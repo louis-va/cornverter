@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corn converter</title>
+  <link rel="stylesheet" href="/src/client/main.css">
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <header>
+        <h1>Cornverter</h1>
+        <p>How much corn can you buy?</p>
+      </header>
+      <main>
+        <section id="usd">
+          <form id="form">
+            <label for="input-usd" id="label-usd">
+              <span class="label-content">
+                <img src="/src/client/assets/icons/dollar-icon.svg" alt="Dollar">
+                USD
+              </span>
+              <input type="text" name="usd" id="input-usd" maxlength="5" placeholder="0" autocomplete="off">
+            </label>
+            <button type="submit" id="submit">
+              <img src="/src/client/assets/icons/transfer-icon.svg" alt="Convert">
+              Convert
+            </button>
+          </form>
+        </section>
+        <section id="corn">
+          <div class="result">
+            <span class="kg">
+              <img src="/src/client/assets/icons/corn-icon.svg" alt="Corn">
+              KG
+            </span>
+            <span id="result">–</span>
+          </div>
+          <div id="graph"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="/src/client/main.js"></script> 
+</body>
+</html>

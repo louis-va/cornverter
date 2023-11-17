@@ -1,0 +1,14 @@
+:root {
+  --black-100: rgba(34, 24, 3, 1);
+  --black-80: rgba(34, 24, 3, .8);
+  --black-60: rgba(34, 24, 3, .6);
+  --black-40: rgba(34, 24, 3, .4);
+  --black-20: rgba(34, 24, 3, .2);
+  --black-10: rgba(34, 24, 3, .1);
+  --white-100: rgba(243, 239, 230, 1);
+  --white-80: rgba(243, 239, 230, .8);
+  --white-60: rgba(243, 239, 230, .6);
+  --white-40: rgba(243, 239, 230, .4);
+  --red-100: rgb(178, 36, 4);
+  --breakpoint-sm: 600px;
+}

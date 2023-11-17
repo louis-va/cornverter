@@ -1,0 +1,71 @@
+section#corn {
+  padding: 2rem 4rem 2rem 4rem;
+  margin-top: 1rem;
+  width: 100%;
+  border: .3rem solid var(--red-100);
+  border-radius: 1.5rem;
+  background-color: var(--red-100);
+}
+
+section#corn .result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section#corn .result .kg {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white-80);
+}
+
+section#corn .result .kg img {
+  width: 2rem;
+}
+
+section#corn .result #result {
+  font-size: 6rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--white-100);
+}
+
+section#corn .result #result .decimal {
+  position: relative;
+  top: -.7em;
+  font-size: .3em;
+  font-weight: 400;
+}
+
+section#corn .result #result.loading {
+  animation: loading-animation .75s infinite;
+  -webkit-animation: loading-animation .75s infinite;
+}
+
+@keyframes loading-animation {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loading-animation {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section#corn {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
