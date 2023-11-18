@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Corn converter</title>
   <link rel="stylesheet" href="/src/client/main.css">
+  <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
 </head>
 <body>
   <div id="app">
     <div class="container">
       <header>
-        <h1>Cornverter</h1>
+        <img src="icon.svg" alt="Logo">
+        <h1><strong>Corn</strong>verter</h1>
         <p>How much corn can you buy?</p>
       </header>
       <main>
@@ -37,7 +39,10 @@
             </span>
             <span id="result">–</span>
           </div>
-          <div id="graph"></div>
+          <div class="chart-container">
+            <h2>Price of corn over the years</h2>
+            <canvas id="chart" class="loading"></canvas>
+          </div>
         </section>
       </main>
     </div>

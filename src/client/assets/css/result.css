@@ -1,6 +1,7 @@
 section#corn {
   padding: 2rem 4rem 2rem 4rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
   border: .3rem solid var(--red-100);
   border-radius: 1.5rem;

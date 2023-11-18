@@ -1,20 +1,27 @@
 header {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
+header img {
+  width: 2rem;
+  margin-bottom: .5rem;
+}
 header h1 {
   text-transform: uppercase;
   font-size: 1.5rem;
+  font-weight: 400;
+}
+header h1 strong {
   font-weight: 600;
+  color: var(--red-100);
 }
 header p {
   display: inline-block;
-  background-color: var(--black-10);
-  padding: .2rem 1rem;
   margin-top: .2rem;
-  border-radius: 1rem;
   text-transform: uppercase;
   font-size: .85rem;
   color: var(--black-60);
