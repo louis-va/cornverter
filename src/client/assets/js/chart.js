@@ -15,14 +15,18 @@ import Chart from 'chart.js/auto';
       datasets: [{
         label: 'Price (USD)',
         data: dataPoints,
-        fill: false,
+        fill: true,
+        backgroundColor: 'rgba(246, 244, 238, 0.05)',
         borderColor: 'rgba(246, 244, 238, 0.8)',
-        tension: 0.1,
+        borderWidth: 3,
+        tension: 0,
         pointRadius: 0
       }]
     }
   
     const options = {
+      aspectRation: 1/2,
+      animation: false,
       parsing: {
         xAxisKey: 'date',
         yAxisKey: 'value'
@@ -37,12 +41,16 @@ import Chart from 'chart.js/auto';
           intersect: false,
           titleFont: {
             family: 'IBM Plex Mono',
-            size: 10
+            size: 12,
+            color: 'rgb(246, 244, 238)'
           },
           bodyFont: {
             family: 'IBM Plex Mono',
-            size: 10
-          }
+            size: 10,
+            color: 'rgb(246, 244, 238)'
+          },
+          backgroundColor: 'rgba(34, 24, 3, 1)',
+          displayColors: false
         },
         legend: {
           display: false
@@ -57,7 +65,7 @@ import Chart from 'chart.js/auto';
             color: 'rgba(246, 244, 238, .05)'
           },
           ticks: {
-            color: 'rgba(246, 244, 238, .4)',
+            color: 'rgba(246, 244, 238, .5)',
             maxTicksLimit: 4,
             font: {
               family: 'IBM Plex Mono',
@@ -73,7 +81,7 @@ import Chart from 'chart.js/auto';
             color: 'rgba(246, 244, 238, .1)'
           },
           ticks: {
-            color: 'rgba(246, 244, 238, .4)',
+            color: 'rgba(246, 244, 238, .5)',
             maxTicksLimit: 4,
             font: {
               family: 'IBM Plex Mono',
