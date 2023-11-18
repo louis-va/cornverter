@@ -46,7 +46,14 @@ app.get('/api/corn-price', async (req, res) => {
     let cornPrice = response.data
 
     cornPrice = cornPrice.filter((dataPoint) => dataPoint.value != ".")
-    cornPrice = cornPrice.map((dataPoint) => ({date: dataPoint.date.replace("-01", ""), value: dataPoint.value}))
+    cornPrice = cornPrice.map((dataPoint) => {
+      let date = new Date(dataPoint.date);
+      let dateFormatted = date.toLocaleDateString("en-US", {year: 'numeric', month: 'short'})
+      return {
+        date: dateFormatted, 
+        value: dataPoint.value
+      }
+    })
     cornPrice.reverse();
 
     writeLog(`Success /api/corn-price`)

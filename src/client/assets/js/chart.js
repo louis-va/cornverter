@@ -17,46 +17,71 @@ import Chart from 'chart.js/auto';
         data: dataPoints,
         fill: false,
         borderColor: 'rgba(246, 244, 238, 0.8)',
-        tension: 0.4,
+        tension: 0.1,
         pointRadius: 0
       }]
     }
   
     const options = {
-      aspectRatio: 2/1,
-      animation: false,
       parsing: {
         xAxisKey: 'date',
         yAxisKey: 'value'
       },
+      hover: {
+        mode: 'index',
+        intersect: false
+      },
       plugins: {
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          titleFont: {
+            family: 'IBM Plex Mono',
+            size: 10
+          },
+          bodyFont: {
+            family: 'IBM Plex Mono',
+            size: 10
+          }
+        },
         legend: {
           display: false
         }
-      },
+      },  
       scales: {
         x: {
-          axis: {
-            color: 'rgba(246, 244, 238, 0.1)'
+          border: {
+            display: false
           },
           grid: {
-            color: 'rgba(246, 244, 238, 0.1)'
+            color: 'rgba(246, 244, 238, .05)'
           },
           ticks: {
-            color: 'rgba(246, 244, 238, 0.3)',
-            maxTicksLimit: 4
+            color: 'rgba(246, 244, 238, .4)',
+            maxTicksLimit: 4,
+            font: {
+              family: 'IBM Plex Mono',
+              size: 10
+            },
           }
         },
         y: {
-          axis: {
-            color: 'rgba(246, 244, 238, 0.1)'
+          border: {
+            display: false
           },
           grid: {
-            color: 'rgba(246, 244, 238, 0.1)'
+            color: 'rgba(246, 244, 238, .1)'
           },
           ticks: {
-            color: 'rgba(246, 244, 238, 0.3)',
-            maxTicksLimit: 5
+            color: 'rgba(246, 244, 238, .4)',
+            maxTicksLimit: 4,
+            font: {
+              family: 'IBM Plex Mono',
+              size: 10
+            },
+            callback: function(val, index) {
+              return '$' + this.getLabelForValue(val)
+            }
           }
         }
       }

@@ -19,7 +19,7 @@
 }
 
 :root {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
   font-weight: 400;
   color: var(--back-80)
