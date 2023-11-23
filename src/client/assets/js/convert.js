@@ -24,7 +24,7 @@
       body: JSON.stringify(data)
     }
 
-    fetch('/api/corn-amount', options)
+    fetch('./api/corn-amount/', options)
       .then(response => response.json())
       .then(data => {displayResult(data.data.cornAmount)})
       .catch((error) => {console.error(error)})

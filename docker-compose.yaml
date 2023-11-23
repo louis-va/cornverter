@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  cornverter:
+    image: node:21
+    working_dir: /app
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=production
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+    command: npm run start

@@ -4,7 +4,7 @@ import Chart from 'chart.js/auto';
   const canvas = document.getElementById('chart')
 
   function getDataPoints() {
-    fetch('/api/corn-price', {method: 'GET'})
+    fetch('./api/corn-price/', {method: 'GET'})
       .then(response => response.json())
       .then(data => {displayChart(data.data.cornPrice)})
       .catch((error) => {console.error(error)})

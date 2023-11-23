@@ -39,7 +39,7 @@ async function getHistoricalCornPrice() {
 }
 
 // Endpoint: get historical corn price
-app.get('/api/corn-price', async (req, res) => {
+app.get('/api/corn-price/', async (req, res) => {
   let response = await getHistoricalCornPrice()
 
   if (response.success) {
@@ -76,7 +76,7 @@ app.get('/api/corn-price', async (req, res) => {
 })
 
 // Endpoint: get the amount of corn (in kg) you can buy with your money (in usd)
-app.post('/api/corn-amount', async (req, res) => {
+app.post('/api/corn-amount/', async (req, res) => {
   if (!req.body.usd || !Number(req.body.usd)) {
     writeLog(`Error /api/corn-amount: incorrect arguments`)
 
